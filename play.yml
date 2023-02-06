@@ -1,0 +1,17 @@
+- name: SOme play
+  hosts: 192.168.0.126
+  tasks:
+  #- name: create a file
+  #  file:
+  #    path: /tmp/somefile1
+  #    state: touch
+
+  - name : second
+    copy:
+      content: "something to test1111111"
+      dest: /tmp/somefile1
+
+  - name: install a software
+    dnf:
+      name: vsftpd
+      state: present
